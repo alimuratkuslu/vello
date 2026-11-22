@@ -1,6 +1,12 @@
-# Vello
+<p align="center">
+  <img src="Vello/Assets.xcassets/AppIcon.appiconset/icon_256x256@2x.png" width="128" height="128" alt="Vello icon">
+</p>
 
-Free, private, on-device dictation for macOS. Hold a key, speak, let go: your words are typed wherever your cursor is.
+<h1 align="center">Vello</h1>
+
+<p align="center">Free, private, on-device dictation for macOS. Hold a key, speak, let go: your words are typed wherever your cursor is.</p>
+
+<p align="center"><a href="https://github.com/alimuratkuslu/vello/releases/latest"><b>Download for Mac</b></a></p>
 
 - **Runs on your Mac.** Speech recognition is local (Whisper large-v3 turbo via [WhisperKit](https://github.com/argmaxinc/argmax-oss-swift)). No account, no cloud, no subscription. Works offline after the first launch.
 - **Fast.** Speech is transcribed in the background while you talk, so even a one-minute dictation is typed about a second after you let go.
