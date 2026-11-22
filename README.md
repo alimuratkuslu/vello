@@ -4,13 +4,24 @@
 
 <h1 align="center">Vello</h1>
 
-<p align="center">Free, private, on-device dictation for macOS. Hold a key, speak, let go: your words are typed wherever your cursor is.</p>
+<p align="center">
+  <img src=".github/demo.gif" width="820" alt="Hold Right Option, speak, and the text is pasted into the terminal">
+</p>
 
-<p align="center"><a href="https://github.com/alimuratkuslu/vello/releases/latest"><b>Download for Mac</b></a> · <code>brew install --cask alimuratkuslu/tap/vello</code></p>
+<h3 align="center">Free, private, on-device dictation for macOS.</h3>
+
+<p align="center">Hold a key, speak, let go: your words are typed wherever your cursor is.</p>
 
 <p align="center">
-  <img src=".github/demo.gif" width="800" alt="Hold Right Option, speak, and the text is pasted into the terminal">
+  <a href="https://github.com/alimuratkuslu/vello/releases/latest"><img src="https://img.shields.io/github/v/release/alimuratkuslu/vello?style=for-the-badge&label=Download%20for%20Mac&color=1c1c1e" alt="Download for Mac"></a>
+  <a href="#install"><img src="https://img.shields.io/badge/Homebrew-install-FBB040?style=for-the-badge&logo=homebrew&logoColor=white" alt="Install with Homebrew"></a>
 </p>
+
+<p align="center"><code>brew install --cask alimuratkuslu/tap/vello</code></p>
+
+<p align="center"><sub>Runs 100% on your Mac &nbsp;·&nbsp; Free and open source &nbsp;·&nbsp; Typed about a second after you let go &nbsp;·&nbsp; macOS 14+ on Apple Silicon</sub></p>
+
+<br>
 
 - **Runs on your Mac.** Speech recognition is local (Whisper large-v3 turbo via [WhisperKit](https://github.com/argmaxinc/argmax-oss-swift)). No account, no cloud, no subscription. Works offline after the first launch.
 - **Fast.** Speech is transcribed in the background while you talk, so even a one-minute dictation is typed about a second after you let go.
