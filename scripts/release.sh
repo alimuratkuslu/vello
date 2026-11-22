@@ -10,7 +10,7 @@ rm -rf $OUT && mkdir -p $OUT/dmg
 
 xcodegen -q
 xcodebuild -project Vello.xcodeproj -scheme Vello -configuration Release -derivedDataPath build/release-dd -quiet \
-  CODE_SIGN_IDENTITY="Developer ID Application" OTHER_CODE_SIGN_FLAGS=--timestamp \
+  CODE_SIGN_IDENTITY="Developer ID Application" OTHER_CODE_SIGN_FLAGS=--timestamp CODE_SIGN_INJECT_BASE_ENTITLEMENTS=NO \
   MARKETING_VERSION=$VERSION CURRENT_PROJECT_VERSION=$VERSION build
 ditto build/release-dd/Build/Products/Release/Vello.app $OUT/dmg/Vello.app
 codesign --verify --deep --strict $OUT/dmg/Vello.app
