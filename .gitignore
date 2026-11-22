@@ -1,0 +1,5 @@
+build/
+Vello.xcodeproj/
+.DS_Store
+eval/samples/*.wav
+eval/results/

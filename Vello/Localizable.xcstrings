@@ -1,0 +1,456 @@
+{
+  "sourceLanguage": "en",
+  "version": "1.0",
+  "strings": {
+    "Accessibility": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erişilebilirlik"
+          }
+        }
+      }
+    },
+    "Add terms and names you use often for more accurate text.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sık kullandığın terimleri ve adları ekle, daha doğru yazsın."
+          }
+        }
+      }
+    },
+    "Allow": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İzin Ver"
+          }
+        }
+      }
+    },
+    "Automatic": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otomatik"
+          }
+        }
+      }
+    },
+    "Choose": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seç"
+          }
+        }
+      }
+    },
+    "Copy Last Text": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Son Metni Kopyala"
+          }
+        }
+      }
+    },
+    "Couldn’t load: %@": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüklenemedi: %@"
+          }
+        }
+      }
+    },
+    "Couldn’t open the microphone": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mikrofon açılamadı"
+          }
+        }
+      }
+    },
+    "Downloading (~600 MB)…": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İndiriliyor (~600 MB)…"
+          }
+        }
+      }
+    },
+    "Downloading: %lld%% (~600 MB)": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İndiriliyor: %%%lld (~600 MB)"
+          }
+        }
+      }
+    },
+    "Edit": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Düzenle"
+          }
+        }
+      }
+    },
+    "Hold the key, speak, let go: what you said is typed where your cursor is. Everything runs on this Mac, for free.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tuşu basılı tut, konuş, bırak: söylediklerin imlecin olduğu yere yazılır. Her şey bu Mac’te çalışır, ücretsizdir."
+          }
+        }
+      }
+    },
+    "Listens only while the key is held.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sesini yalnızca tuş basılıyken dinler."
+          }
+        }
+      }
+    },
+    "Listens only while the key is held. Uses the MacBook mic when AirPods are in, so your music isn’t degraded.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sesini yalnızca tuş basılıyken dinler. AirPods takılıyken MacBook mikrofonunu kullanır, müziğin bozulmaz."
+          }
+        }
+      }
+    },
+    "Listens while held, types when released.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Basılı tutarken dinler, bırakınca yazar."
+          }
+        }
+      }
+    },
+    "MacBook microphone": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MacBook mikrofonu"
+          }
+        }
+      }
+    },
+    "Microphone": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mikrofon"
+          }
+        }
+      }
+    },
+    "Needed to detect the key and type the text.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tuşu algılamak ve metni yazmak için gerekli."
+          }
+        }
+      }
+    },
+    "Open Settings": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayarları Aç"
+          }
+        }
+      }
+    },
+    "Open at login": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Girişte Başlat"
+          }
+        }
+      }
+    },
+    "Pause": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duraklat"
+          }
+        }
+      }
+    },
+    "Preparing (first launch only, takes a few minutes)…": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hazırlanıyor (yalnızca ilk açılışta, birkaç dakika sürer)…"
+          }
+        }
+      }
+    },
+    "Preparing…": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hazırlanıyor…"
+          }
+        }
+      }
+    },
+    "Quit": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çıkış"
+          }
+        }
+      }
+    },
+    "Ready": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hazır"
+          }
+        }
+      }
+    },
+    "Resume": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Devam Ettir"
+          }
+        }
+      }
+    },
+    "Right Command": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sağ Command"
+          }
+        }
+      }
+    },
+    "Right Control (external keyboard)": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sağ Control (harici klavye)"
+          }
+        }
+      }
+    },
+    "Right Option": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sağ Option"
+          }
+        }
+      }
+    },
+    "Set up Vello": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vello’yu kur"
+          }
+        }
+      }
+    },
+    "Settings…": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayarlar…"
+          }
+        }
+      }
+    },
+    "Setup isn’t finished": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kurulum tamamlanmadı"
+          }
+        }
+      }
+    },
+    "So Fn doesn’t open anything else: System Settings > Keyboard > Press fn key to: Do Nothing": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fn’nin başka bir şey açmaması için: Sistem Ayarları > Klavye > Fn tuşuna basınca: Hiçbir şey yapma"
+          }
+        }
+      }
+    },
+    "Speaking language": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konuşma Dili"
+          }
+        }
+      }
+    },
+    "Speech model": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ses modeli"
+          }
+        }
+      }
+    },
+    "Speech model: %@": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ses modeli: %@"
+          }
+        }
+      }
+    },
+    "Start": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başla"
+          }
+        }
+      }
+    },
+    "Start Vello when your Mac starts.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac açılınca Vello da açılsın."
+          }
+        }
+      }
+    },
+    "System default": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem varsayılanı"
+          }
+        }
+      }
+    },
+    "Talk key": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konuşma Tuşu"
+          }
+        }
+      }
+    },
+    "Transcription failed": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çeviri başarısız oldu"
+          }
+        }
+      }
+    },
+    "Which language will you dictate in?": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hangi dilde dikte edeceksin?"
+          }
+        }
+      }
+    },
+    "Word list": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kelime Listesi"
+          }
+        }
+      }
+    },
+    "# Vello word list: one word per line. Add technical terms, project and people names you use often.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "# Vello Kelime Listesi: her satıra bir kelime. Sık kullandığın teknik terimleri, proje ve kişi adlarını ekle."
+          }
+        }
+      }
+    },
+    "# Over ~40 words noticeably slows typing. Lines starting with '#' are ignored.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "# Liste ~40 kelimeyi geçerse yazma belirgin yavaşlar. '#' ile başlayan satırlar yok sayılır."
+          }
+        }
+      }
+    }
+  }
+}

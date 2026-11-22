@@ -1,0 +1,16 @@
+{
+  "sourceLanguage": "en",
+  "version": "1.0",
+  "strings": {
+    "NSMicrophoneUsageDescription": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vello, söylediklerini yazıya çevirmek için mikrofonu kullanır."
+          }
+        }
+      }
+    }
+  }
+}
