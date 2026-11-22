@@ -24,17 +24,6 @@ Requires macOS 14 or later on Apple Silicon.
 - **In calls:** Vello works during Zoom, Meet, Teams or Slack calls, but the people on the call hear you dictating unless you mute yourself there.
 - **Settings:** open Vello again from Launchpad or Finder, or use the menu bar icon → Settings.
 
-## Build from source
-
-```sh
-brew install xcodegen
-scripts/run.sh          # builds, installs to /Applications and launches
-```
-
-Set `DEVELOPMENT_TEAM` in `project.yml` to your own Apple team ID first. A stable signing identity keeps the Microphone and Accessibility permissions across rebuilds.
-
-`scripts/release.sh <version>` builds a signed, notarized dmg (needs a Developer ID and a `notarytool` keychain profile).
-
 ## Türkçe
 
 Vello, macOS için ücretsiz ve tamamen cihaz üzerinde çalışan bir dikte uygulaması. Tuşu basılı tut, konuş, bırak: söylediklerin imlecin olduğu yere yazılır.
