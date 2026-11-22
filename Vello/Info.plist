@@ -29,5 +29,15 @@
 	<true/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Vello uses the microphone to turn what you say into text.</string>
+	<key>SUAutomaticallyUpdate</key>
+	<false/>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>https://github.com/alimuratkuslu/vello/releases/latest/download/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>Lu6b9EQGUDhUx/7OR5kGCPRaNWjtlzDjJGBj7ksU92c=</string>
+	<key>SUScheduledCheckInterval</key>
+	<integer>86400</integer>
 </dict>
 </plist>

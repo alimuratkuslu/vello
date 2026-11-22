@@ -17,11 +17,23 @@
 
 ## Install
 
-1. Download `Vello-x.y.z.dmg` from [Releases](../../releases) and drag Vello to Applications.
-2. Open Vello and follow the setup window: pick your speaking language and talk key, allow Microphone and Accessibility, and wait for the speech model (~600 MB, one time).
-3. Hold **Right Option** (or the key you picked), speak, release.
+With [Homebrew](https://brew.sh):
+
+```sh
+brew install --cask alimuratkuslu/tap/vello
+```
+
+Or download `Vello-x.y.z.dmg` from [Releases](../../releases/latest) and drag Vello to Applications.
+
+Then open Vello and follow the setup window: pick your speaking language and talk key, allow Microphone and Accessibility. The speech model (~600 MB) downloads once in the background; a card tells you when it's ready. Hold **Right Option** (or the key you picked), speak, release.
+
+Vello updates itself: it checks for new versions daily and asks before installing.
 
 Requires macOS 14 or later on Apple Silicon.
+
+## Privacy
+
+Your voice never leaves your Mac. Recording happens only while you hold the talk key, transcription runs on-device, and nothing is stored or sent anywhere. Vello connects to the internet only to download the speech model once and to check GitHub for updates.
 
 ## Tips
 
@@ -29,6 +41,7 @@ Requires macOS 14 or later on Apple Silicon.
 - **AirPods:** with the microphone on *Automatic*, Vello records from the MacBook mic while AirPods are connected, so your music isn't degraded and the first word isn't cut off.
 - **In calls:** Vello works during Zoom, Meet, Teams or Slack calls, but the people on the call hear you dictating unless you mute yourself there.
 - **Settings:** open Vello again from Launchpad or Finder, or use the menu bar icon → Settings.
+- **Feedback:** menu bar icon → Send Feedback… opens a GitHub issue with your versions filled in.
 
 ## Türkçe
 
@@ -38,7 +51,9 @@ Vello, macOS için ücretsiz ve tamamen cihaz üzerinde çalışan bir dikte uyg
 - Konuşurken arka planda çevirir; bir dakikalık Dikte bile tuşu bıraktıktan yaklaşık bir saniye sonra yazılır.
 - Türkçe içinde İngilizce teknik kelimelerle konuşmak için tasarlandı.
 
-**Kurulum:** [Releases](../../releases) sayfasından `Vello-x.y.z.dmg` dosyasını indir, Vello'yu Uygulamalar klasörüne sürükle, aç ve kurulum penceresini takip et. macOS 14+ ve Apple Silicon gerekir.
+**Kurulum:** `brew install --cask alimuratkuslu/tap/vello` ya da [Releases](../../releases/latest) sayfasından `Vello-x.y.z.dmg` dosyasını indirip Vello'yu Uygulamalar klasörüne sürükle. Sonra aç ve kurulum penceresini takip et. Vello kendini günceller. macOS 14+ ve Apple Silicon gerekir.
+
+**Gizlilik:** Sesin Mac'inden hiç çıkmaz. Yalnızca tuş basılıyken kaydedilir, cihazda yazıya çevrilir, hiçbir yere kaydedilmez veya gönderilmez. Vello internete yalnızca ses modelini bir kez indirmek ve güncellemeleri kontrol etmek için bağlanır.
 
 **Görüşmelerde:** Zoom, Meet, Teams veya Slack görüşmesindeyken de çalışır; ama kendini oradan sessize almazsan karşı taraf dikte ettiklerini duyar.
 

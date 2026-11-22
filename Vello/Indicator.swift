@@ -90,3 +90,56 @@ private struct Dots: View {
         }
     }
 }
+
+/// One-time "ready" card under the menu bar after the first model download, so nobody has to watch it prepare.
+/// Our own panel instead of a system notification: no extra permission to ask for during setup.
+@MainActor
+enum ReadyToast {
+    private static var panel: NSPanel?
+
+    static func show(talkKey: String) {
+        let view = NSHostingView(rootView: ReadyCard(talkKey: talkKey))
+        let size = view.fittingSize
+        let p = NSPanel(contentRect: NSRect(origin: .zero, size: size),
+                        styleMask: [.borderless, .nonactivatingPanel], backing: .buffered, defer: false)
+        p.level = .statusBar
+        p.backgroundColor = .clear
+        p.isOpaque = false
+        p.hasShadow = true
+        p.ignoresMouseEvents = true
+        p.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary, .stationary]
+        p.contentView = view
+        if let area = NSScreen.main?.visibleFrame {
+            p.setFrameOrigin(NSPoint(x: area.maxX - size.width - 12, y: area.maxY - size.height - 8))
+        }
+        p.alphaValue = 0
+        p.orderFrontRegardless()
+        NSAnimationContext.runAnimationGroup { $0.duration = 0.25; p.animator().alphaValue = 1 }
+        panel = p
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            NSAnimationContext.runAnimationGroup({ $0.duration = 0.4; p.animator().alphaValue = 0 }) {
+                p.orderOut(nil)
+                if panel === p { panel = nil }
+            }
+        }
+    }
+}
+
+private struct ReadyCard: View {
+    let talkKey: String
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(nsImage: NSApp.applicationIconImage)
+                .resizable().frame(width: 36, height: 36)
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Vello is ready").font(.system(size: 13, weight: .semibold)).foregroundStyle(.white)
+                Text("Hold \(talkKey) to talk").font(.system(size: 12)).foregroundStyle(Color.white.opacity(0.65))
+            }
+        }
+        .padding(.horizontal, 14).padding(.vertical, 12)
+        .frame(width: 300, alignment: .leading)
+        .background(RoundedRectangle(cornerRadius: 12).fill(Color(white: 0.11)))
+        .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.white.opacity(0.08)))
+    }
+}

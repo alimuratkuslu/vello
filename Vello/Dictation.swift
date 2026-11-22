@@ -76,7 +76,8 @@ final class Dictation: ObservableObject {
             // Skip the network once downloaded: works offline and doesn't flash "Downloading" on every launch.
             let marker = base.appendingPathComponent(".downloaded")
             var folder = base.appendingPathComponent("models/argmaxinc/whisperkit-coreml/openai_whisper-large-v3-v20240930_turbo_632MB")
-            if !FileManager.default.fileExists(atPath: marker.path) {
+            let firstDownload = !FileManager.default.fileExists(atPath: marker.path)
+            if firstDownload {
                 modelStatus = String(localized: "Downloading (~600 MB)…")
                 folder = try await WhisperKit.download(variant: Self.model, downloadBase: base) { progress in
                     Task { @MainActor in
@@ -94,6 +95,7 @@ final class Dictation: ObservableObject {
             self.whisper = whisper
             modelReady = true
             state = .idle
+            if firstDownload { ReadyToast.show(talkKey: Settings.talkKey.title) }
         } catch {
             modelStatus = String(localized: "Couldn’t load: \(error.localizedDescription)")
             state = .error

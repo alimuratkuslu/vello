@@ -1,0 +1,37 @@
+name: Feedback
+description: Report a bug or suggest an idea
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options:
+        - Bug
+        - Idea
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened, or what would you like?
+      description: For bugs, include what you expected and what you saw instead.
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Speaking language
+      placeholder: e.g. Turkish
+  - type: input
+    id: microphone
+    attributes:
+      label: Microphone
+      placeholder: e.g. MacBook mic, AirPods, external USB mic
+  - type: input
+    id: vello-version
+    attributes:
+      label: Vello version
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version

@@ -471,6 +471,46 @@
           }
         }
       }
+    },
+    "Check for Updates…": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Güncellemeleri Denetle…"
+          }
+        }
+      }
+    },
+    "Send Feedback…": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geri Bildirim Gönder…"
+          }
+        }
+      }
+    },
+    "Vello is ready": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vello hazır"
+          }
+        }
+      }
+    },
+    "Hold %@ to talk": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konuşmak için %@ tuşunu basılı tut"
+          }
+        }
+      }
     }
   }
 }
