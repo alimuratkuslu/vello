@@ -22,6 +22,14 @@ enum SettingsWindow {
     }
 
     static func close() { window?.close() }
+
+    /// Only if it's open: a grant shouldn't pop the window up after setup.
+    static func bringToFront() {
+        guard let window, window.isVisible else { return }
+        NSApp.activate(ignoringOtherApps: true)
+        window.orderFrontRegardless()
+        window.makeKey()
+    }
 }
 
 private struct SettingsView: View {
@@ -32,7 +40,8 @@ private struct SettingsView: View {
     @State private var launchAtLogin = LoginItem.isEnabled
     @State private var setupDone = Settings.setupDone
 
-    private var ready: Bool { language != nil && dictation.micGranted && dictation.axTrusted && dictation.modelReady }
+    // The model can finish in the background after Start; waiting minutes on it is the slowest part of setup.
+    private var ready: Bool { language != nil && dictation.micGranted && dictation.axTrusted }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -74,7 +83,7 @@ private struct SettingsView: View {
                 }
             }
 
-            Row(title: String(localized: "Accessibility"), detail: String(localized: "Needed to detect the key and type the text."), done: dictation.axTrusted) {
+            Row(title: String(localized: "Accessibility"), detail: dictation.axRequested && !dictation.axTrusted ? String(localized: "In System Settings, turn on the switch next to Vello. This window comes back on its own.") : String(localized: "Needed to detect the key and type the text."), done: dictation.axTrusted) {
                 if !dictation.axTrusted { Button("Open Settings") { dictation.requestAccessibility() } }
             }
 

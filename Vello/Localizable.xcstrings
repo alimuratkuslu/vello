@@ -451,6 +451,26 @@
           }
         }
       }
+    },
+    "Speech model is still getting ready": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ses modeli hâlâ hazırlanıyor"
+          }
+        }
+      }
+    },
+    "In System Settings, turn on the switch next to Vello. This window comes back on its own.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem Ayarları'nda Vello'nun yanındaki anahtarı aç. Bu pencere kendiliğinden geri gelir."
+          }
+        }
+      }
     }
   }
 }

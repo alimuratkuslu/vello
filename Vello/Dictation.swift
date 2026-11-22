@@ -21,6 +21,7 @@ final class Dictation: ObservableObject {
     @Published private(set) var modelReady = false
     @Published private(set) var modelStatus = String(localized: "Preparing…")
     @Published private(set) var modelProgress: Double?
+    @Published private(set) var axRequested = false
 
     private var whisper: WhisperKit?
     private var pressedAt = Date()
@@ -102,10 +103,14 @@ final class Dictation: ObservableObject {
     private func refreshPermissions() {
         let mic = AVCaptureDevice.authorizationStatus(for: .audio) == .authorized
         let ax = AXIsProcessTrusted()
-        if mic != micGranted { micGranted = mic }
+        // A grant happens in a system dialog or System Settings, which leaves our window behind; bring it back.
+        if mic != micGranted {
+            micGranted = mic
+            if mic { SettingsWindow.bringToFront() }
+        }
         if ax != axTrusted {
             axTrusted = ax
-            if ax { startMonitoring() }
+            if ax { startMonitoring(); SettingsWindow.bringToFront() }
         }
         if Settings.setupDone && (!mic || !ax) && !wasPromptedForRevoke {
             wasPromptedForRevoke = true // reopen the window once per revoke, not every second
@@ -116,18 +121,28 @@ final class Dictation: ObservableObject {
     private var wasPromptedForRevoke = false
 
     func requestMic() {
-        if AVCaptureDevice.authorizationStatus(for: .audio) == .denied {
+        switch AVCaptureDevice.authorizationStatus(for: .audio) {
+        case .notDetermined:
+            // AVCaptureDevice, not WhisperKit's AVAudioApplication request: on macOS that one could report a grant
+            // that authorizationStatus (and recording) didn't see, so the row flipped back to "Allow".
+            AVCaptureDevice.requestAccess(for: .audio) { _ in
+                Task { @MainActor in self.refreshPermissions(); SettingsWindow.bringToFront() }
+            }
+        default:
             // The system only asks once; after a denial the switch lives in System Settings.
             NSWorkspace.shared.open(URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Microphone")!)
-        } else {
-            Task { micGranted = await AudioProcessor.requestRecordPermission() }
         }
     }
 
     func requestAccessibility() {
-        let prompt = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true] as CFDictionary
-        if !AXIsProcessTrustedWithOptions(prompt) {
+        if axRequested {
+            // The system alert only shows once; later clicks go straight to the right pane.
             NSWorkspace.shared.open(URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility")!)
+        } else {
+            // Adds Vello to the Accessibility list and shows the system alert with an "Open System Settings" button.
+            let prompt = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true] as CFDictionary
+            _ = AXIsProcessTrustedWithOptions(prompt)
+            axRequested = true
         }
     }
 
@@ -150,7 +165,8 @@ final class Dictation: ObservableObject {
         let key = Settings.talkKey
         guard event.keyCode == key.keyCode else { return }
         if key.isDown(event.modifierFlags) {
-            if !paused && canDictate { start() }
+            guard !paused && canDictate else { return }
+            if modelReady { start() } else { flash(String(localized: "Speech model is still getting ready")) }
         } else {
             stop()
         }
